@@ -1,0 +1,13 @@
+<?php
+/**
+ * HCC Theme special functions
+ */
+
+/**
+ * Implements hook_theme_suggestions_block_alter
+ */
+function hcc_theme_theme_suggestions_block_alter(&$suggestions, $variables) {
+  foreach($suggestions as &$suggestion) {
+    $suggestion = str_replace("hcc_theme_", "", $suggestion);
+  }
+}
