@@ -1,0 +1,68 @@
+@import "compass";
+@import "variables.scss";
+
+body {
+  font-size: 20px;
+  font-family: $freight;
+  font-weight: $lt;
+}
+
+.navbar-color {
+  background: $med-blue;
+}
+
+.navbar-default {
+  background: transparent;
+  border: none;
+}
+
+/*
+.navbar-nav > li > a {
+  color: $navlink-link;
+  font-weight: $navlink-weight;
+  font-size: $navlink-size;
+  padding: $navlink-padding;
+  @include border(top, 7px, $white);
+}
+
+.nav > li > a:hover,
+.nav > li > a.active,
+.nav > li.active-trail a.active-trail,
+.nav > li > a:focus {
+  background: $navlink-bkgrd-active;
+  color: $navlink-link-active;
+  border-color: $navlink-link;
+}
+
+.submenu {
+  text-align: right;
+  font-size: $submenu-link-size;
+  font-family: $submenu-link-font;
+  //text-align: right;
+  .nav {
+    width: 80%;
+    float: right;
+    margin-top: 20px;
+    li {
+      a {
+        font-weight: normal;
+        color: $submenu-link-link;
+        display: inline-block;
+        padding: 3px 0 3px 18px;
+        margin-bottom: 26px;
+        //padding: 10px 0;
+      }
+      a:hover,
+      a:focus,
+      a.active-trail {
+        color: $submenu-link-link-active;
+        background: $submenu-link-bkgrd-active;
+      }
+      a.active-trail {
+      }
+    }
+  }
+}
+
+*/
+
