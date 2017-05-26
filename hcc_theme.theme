@@ -11,3 +11,4 @@ function hcc_theme_theme_suggestions_block_alter(&$suggestions, $variables) {
     $suggestion = str_replace("hcc_theme_", "", $suggestion);
   }
 }
+

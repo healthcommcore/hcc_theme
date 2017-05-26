@@ -5,6 +5,40 @@ body {
   font-size: 20px;
   font-family: $freight;
   font-weight: $lt;
+  color: $dark-blue;
+}
+
+.main-content {
+  font-size: 1.2em;
+}
+
+h1, h2, h3, h4, h5, strong {
+  font-weight: normal;
+}
+
+strong, a {
+  font-weight: $semi;
+}
+
+a {
+  color: $orange;
+}
+
+h1 {
+  font-family: $freight-con;
+  font-weight: $book;
+  font-size: 2.7em;
+}
+
+h2 {
+  font-family: $freight;
+  font-weight: $semi;
+  color: $green;
+}
+
+.page-title {
+  border-bottom: $dark-blue 2px solid;
+  margin-bottom: 40px;
 }
 
 .navbar-color {
@@ -16,29 +50,98 @@ body {
   border: none;
 }
 
-/*
 .navbar-nav > li > a {
-  color: $navlink-link;
+  padding: 20px 30px 23px 30px;
+}
+
+.navbar-default .navbar-nav > li > a,
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li.active > a,
+.navbar-default .navbar-nav > li.active > a:hover,
+.navbar-default .navbar-nav > li.active > a:focus,
+.navbar-default .navbar-nav > li > a:focus {
+  color: $navlink-link-color;
+  background: none;
+}
+
+.navbar-default .navbar-nav > li > a {
+  font-family: $navlink-inactive-font;
+  border-top: $med-blue 11px solid;
+  border-bottom: $med-blue 4px solid;
+}
+
+/*
   font-weight: $navlink-weight;
   font-size: $navlink-size;
   padding: $navlink-padding;
   @include border(top, 7px, $white);
 }
+*/
 
-.nav > li > a:hover,
-.nav > li > a.active,
-.nav > li.active-trail a.active-trail,
-.nav > li > a:focus {
-  background: $navlink-bkgrd-active;
-  color: $navlink-link-active;
-  border-color: $navlink-link;
+.navbar-default .navbar-nav > li.active > a,
+.navbar-default .navbar-nav > li > a.is-active {
+  font-family: $navlink-active-font;
+  border-top: #fff 11px solid;
+  border-bottom: $orange 4px solid;
 }
 
-.submenu {
-  text-align: right;
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a.active,
+.navbar-default .navbar-nav > li.active-trail a.active-trail,
+.navbar-default .navbar-nav > li > a:focus {
+//  background: $navlink-bkgrd-active;
+//  color: $navlink-link-active;
+//  border-color: $navlink-link;
+}
+/*
+*/
+
+.region-sidebar-first {
+  .navbar-nav {
+  }
+  .navbar-nav > li > a {
+    font-family: $submenu-link-font;
+    color: $submenu-link-color;
+    line-height: 1.6;
+    padding: 4px 20px 10px 20px;
+    margin-bottom: 22px;
+    border-left: #fff 5px solid;
+  }
+  .navbar-nav > li > a:hover,
+  .navbar-nav > li.active a,
+  .navbar-nav > li.active a.is-active,
+  .navbar-nav > li > a:focus {
+    background: none;
+    border-color: $orange;
+  }
+  .navbar-nav > li.active a,
+  .navbar-nav > li.active a.is-active {
+    font-family: $sinkin-bold;
+  }
+  .dropdown.active {
+    .dropdown-menu {
+      display: block;
+    }
+  }
+  .navbar-nav {
+    .dropdown-menu {
+      position: relative;
+      box-shadow: none;
+      border: none;
+      margin-left: 30px;
+      li > a {
+        color: $orange;
+        font-family: $sinkin-lt;
+      }
+    }
+  }
+  .navbar-nav > li.dropdown.active a {
+    margin-bottom: 5px;
+  }
+}
+
+/*
   font-size: $submenu-link-size;
-  font-family: $submenu-link-font;
-  //text-align: right;
   .nav {
     width: 80%;
     float: right;
