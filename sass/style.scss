@@ -6,10 +6,19 @@ body {
   font-family: $freight;
   font-weight: $lt;
   color: $dark-blue;
+  margin-top: 0;
+}
+
+.banner {
+  padding: 12px 0;
 }
 
 .main-content {
   font-size: 1.2em;
+}
+
+.content-margin-left {
+  margin-left: 50px;
 }
 
 h1, h2, h3, h4, h5, strong {
@@ -137,6 +146,71 @@ h2 {
   }
   .navbar-nav > li.dropdown.active a {
     margin-bottom: 5px;
+  }
+}
+
+.footer {
+  padding: 30px 0 50px;
+}
+
+.footer-border {
+  border-top: $med-blue 16px solid;
+}
+
+.region-footer-right {
+  float: right;
+  font-family: $ministry;
+  font-weight: $lt;
+}
+
+.footer-menu,
+.footer-copyright {
+  float: right;
+  color: #000;
+  font-size: 0.9em;
+  li {
+    float: left;
+    list-style: none;
+    border-left: #000 1px solid;
+    padding: 0 10px;
+  }
+  li:first-child {
+    border: none;
+    padding-left: 0;
+  }
+  li:last-child {
+    padding-right: 0;
+  }
+  li > a {
+    padding: 0;
+  }
+  a {
+    text-decoration: underline;
+    color: #000;
+  }
+}
+
+.footer-menu {
+  ul {
+    margin-bottom: 10px;
+  }
+  li > a:hover,
+  li > a:focus,
+  li.active > a {
+    background: none;
+  }
+}
+
+.footer-copyright {
+  text-align: right;
+  ul {
+    margin-left: 0;
+    padding-left: 0;
+  }
+  ul:after {
+    content: "";
+    display: block;
+    clear: both;
   }
 }
 

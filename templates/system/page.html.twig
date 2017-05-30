@@ -173,8 +173,10 @@
 
           {# Content #}
           {% block content %}
-            <a id="main-content"></a>
-            {{ page.content }}
+            <div class="content-margin-left">
+              <a id="main-content"></a>
+              {{ page.content }}
+            </div>
           {% endblock %}
         </section>
       </div>
@@ -191,10 +193,19 @@
   </div>
 {% endblock %}
 
-{% if page.footer %}
+{% if page.footer_left or page.footer_right %}
   {% block footer %}
-    <footer class="footer {{ container }}" role="contentinfo">
-      {{ page.footer }}
+    <footer class="footer footer-border" role="contentinfo">
+      <div class=" {{ container }}">
+        <div class="row"> 
+          <div class="col-md-4">
+            {{ page.footer_left }}
+          </div>
+          <div class="col-md-5 col-md-push-3">
+            {{ page.footer_right }}
+          </div>
+        </div>
+      </div>
     </footer>
   {% endblock %}
 {% endif %}
