@@ -4,7 +4,7 @@
 body {
   font-size: 20px;
   font-family: $freight;
-  font-weight: $lt;
+  font-weight: $book;
   color: $dark-blue;
   margin-top: 0;
 }
@@ -37,12 +37,14 @@ h1 {
   font-family: $freight-con;
   font-weight: $book;
   font-size: 2.7em;
+  letter-spacing: -0.01em;
 }
 
 h2 {
   font-family: $freight;
   font-weight: $semi;
   color: $green;
+  margin-top: 40px;
 }
 
 .page-title {
@@ -125,11 +127,16 @@ h2 {
   }
   .navbar-nav > li.active a,
   .navbar-nav > li.active a.is-active {
-    font-family: $sinkin-bold;
+    font-family: $sinkin-med;
   }
   .dropdown.active {
     .dropdown-menu {
       display: block;
+      font-size: 100%;
+      background: none;
+      li a {
+        width: 80%;
+      }
     }
   }
   .navbar-nav {
@@ -159,8 +166,8 @@ h2 {
 
 .region-footer-right {
   float: right;
-  font-family: $ministry;
-  font-weight: $lt;
+  //font-family: $ministry;
+  //font-weight: $lt;
 }
 
 .footer-menu,
@@ -187,6 +194,7 @@ h2 {
   a {
     text-decoration: underline;
     color: #000;
+    font-weight: $book;
   }
 }
 
