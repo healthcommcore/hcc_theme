@@ -133,11 +133,11 @@ h2 {
   .dropdown.active {
     .dropdown-menu {
       display: block;
-      font-size: 100%;
+      font-size: 0.91em;
       background: none;
-      li a {
-        width: 80%;
-      }
+    }
+    li a {
+      white-space: normal;
     }
   }
   .navbar-nav {
@@ -146,6 +146,7 @@ h2 {
       box-shadow: none;
       border: none;
       margin-left: 30px;
+      margin-bottom: 10px;
       li > a {
         color: $orange;
         font-family: $sinkin-lt;
@@ -167,8 +168,6 @@ h2 {
 
 .region-footer-right {
   float: right;
-  //font-family: $ministry;
-  //font-weight: $lt;
 }
 
 .footer-menu,
@@ -213,6 +212,7 @@ h2 {
 .footer-copyright {
   text-align: right;
   ul {
+    display: inline-block;
     margin-left: 0;
     padding-left: 0;
   }
@@ -222,33 +222,3 @@ h2 {
     clear: both;
   }
 }
-
-/*
-  font-size: $submenu-link-size;
-  .nav {
-    width: 80%;
-    float: right;
-    margin-top: 20px;
-    li {
-      a {
-        font-weight: normal;
-        color: $submenu-link-link;
-        display: inline-block;
-        padding: 3px 0 3px 18px;
-        margin-bottom: 26px;
-        //padding: 10px 0;
-      }
-      a:hover,
-      a:focus,
-      a.active-trail {
-        color: $submenu-link-link-active;
-        background: $submenu-link-bkgrd-active;
-      }
-      a.active-trail {
-      }
-    }
-  }
-}
-
-*/
-

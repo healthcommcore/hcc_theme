@@ -72,5 +72,25 @@
     {{ page }}
     {{ page_bottom }}
     <js-bottom-placeholder token="{{ placeholder_token|raw }}">
+<!-- Popup window for external links -->
+<script>
+(function($){
+	var extLinks = $('.popup');
+	var width = $(window).width() / 1.5;
+	var height = $(window).height();
+	var xPos = window.screenX + (window.outerWidth - width) / 2;
+	var yPos = window.screenY + (window.outerHeight - height) / 2;;
+	var options = "scrollbars, resizable, menubar, toolbar, status=0 ,location," + 
+		"height=" + height + ",width=" + width + 
+		",top=" + yPos + ",left=" + xPos;
+	for(var i = 0; i < extLinks.length; i++){
+		extLinks[i].onclick = function(){
+			window.open(this.href, this.value, options);
+			return false;
+		}
+	}
+})(jQuery);
+</script>
+
   </body>
 </html>
