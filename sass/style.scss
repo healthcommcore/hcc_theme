@@ -31,6 +31,7 @@ strong, a {
 
 a {
   color: $orange;
+  word-wrap: break-word;
 }
 
 h1 {
@@ -93,14 +94,11 @@ h2 {
 .navbar-default .navbar-nav > li > a.active,
 .navbar-default .navbar-nav > li.active-trail a.active-trail,
 .navbar-default .navbar-nav > li > a:focus {
-//  background: $navlink-bkgrd-active;
-//  color: $navlink-link-active;
-//  border-color: $navlink-link;
 }
 /*
 */
 
-.region-sidebar-first {
+.subnav {
   .navbar-nav {
   }
   .navbar-nav > li > a {
@@ -239,7 +237,7 @@ h2 {
     margin-left: 20px;
   }
 
-  .region-sidebar-first {
+  .subnav {
     .navbar-nav > li > a {
       font-size: 0.8em;
       margin-bottom: 10px;
@@ -259,5 +257,82 @@ h2 {
   }
   .footer-copyright {
     float: none;
+  }
+}
+
+
+@media(max-width: 767px) {
+  .navbar-default {
+    border-bottom: $med-blue 2px solid;
+  }
+  .navbar-collapse {
+    background: #fff;
+  }
+  .navbar-default .navbar-nav > li > a {
+    padding-left: 20px;
+  }
+  .navbar-default .navbar-nav > li.expanded.active > a {
+    padding-bottom: 5px;
+  }
+  .navbar-default .navbar-nav > li > a,
+  .navbar-default .navbar-nav > li > a:hover,
+  .navbar-default .navbar-nav > li.active > a,
+  .navbar-default .navbar-nav > li.active > a:hover,
+  .navbar-default .navbar-nav > li.active > a:focus,
+  .navbar-default .navbar-nav > li > a:focus {
+    color: $submenu-link-color;
+    background: none;
+    border: 0;
+  }
+
+  .dropdown-menu {
+    margin-left: 20px;
+    box-shadow: none;
+    border: 0;
+    position: relative;
+    display: block;
+    padding-right: 10px;
+    li {
+      margin: 12px 0;
+    }
+    li > a {
+      font-family: $submenu-link-font;
+      color: $submenu-link-color;
+      white-space: normal;
+    }
+    li > a:hover, li > a:focus, li.active a,
+    li.active > a.is-active {
+      background: none;
+      color: $submenu-link-color;
+    }
+    li.active > a.is-active {
+      font-weight: $semi;
+    }
+  }
+  .content-margin-left {
+    margin-left: 0;
+  }
+  h1 {
+    font-size: 2.3em;
+    line-height: 1.0em;
+    margin-top: 10px;
+  }
+  .main-content {
+    font-size: 1.1em;
+  }
+  .region-footer-right,
+  .footer-logos,
+  .footer-menu,
+  .footer-copyright {
+    float: none;
+    text-align: center;
+  }
+  .footer-logos img,
+  .footer-menu ul,
+  .footer-copyright > * {
+    display: inline-block;
+  }
+  .footer-logos {
+    margin-bottom: 50px;
   }
 }
