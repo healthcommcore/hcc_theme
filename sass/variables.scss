@@ -19,6 +19,7 @@ $semi: 600;
 $bold: 700;
 
 /* Embedded fonts */
+$sinkin-exlt: "sinkin_sans200_x_light";
 $sinkin-lt: "sinkin_sans300_light";
 $sinkin-reg: "sinkin_sans400_regular";
 $sinkin-med: "sinkin_sans500_medium";
@@ -26,8 +27,8 @@ $sinkin-semi: "sinkin_sans600_semibold";
 $sinkin-bold: "sinkin_sans700_bold";
 
 /* Nav */
-$navlink-inactive-font: $sinkin-lt;
-$navlink-active-font: $sinkin-med;
+$navlink-inactive-font: $sinkin-exlt;
+$navlink-active-font: $sinkin-reg;
 $navlink-link-color: #fff;
 
 /* Subnav */
