@@ -12,3 +12,14 @@ function hcc_theme_theme_suggestions_block_alter(&$suggestions, $variables) {
   }
 }
 
+/**
+ * Implements hook_preprocess_page_title()
+ */
+function hcc_theme_preprocess_page_title (&$variables) {
+  $route = \Drupal::request()->getRequestUri();
+  $to_arr = explode("/", $route);
+  $route_array = array_slice($to_arr, 1);
+  $is_landing = count($route_array) === 1 ? true : false;
+  //kint($is_landing);
+  $variables['is_landing'] = $is_landing;
+}

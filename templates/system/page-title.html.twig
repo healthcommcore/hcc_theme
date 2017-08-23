@@ -10,6 +10,7 @@
  * - title: The page title, for use in the actual content.
  * - title_suffix: Additional output populated by modules, intended to be
  *   displayed after the main title tag that appears in the template.
+ * - is_landing: Determine whether or not the current page is a landing page.
  *
  * @ingroup templates
  *
@@ -20,7 +21,11 @@
   <div class="page-title col-md-12" role="heading">
     <div class="row">
       <div class="col-md-9 col-md-push-3">
-        <h1 class="content-margin-left">{{ title }}</h1>
+        {% if is_landing %}
+          <h1 class="content-margin-left landing">{{ title }}</h1>
+        {% else %}
+          <h1 class="content-margin-left">{{ title }}</h1>
+        {% endif %}
       </div>
     </div>
   </div>

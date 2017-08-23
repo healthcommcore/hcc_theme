@@ -10,6 +10,7 @@ regions:
   banner: 'Banner'
   navigation: 'Navigation'
   navigation_collapsible: 'Navigation (Collapsible)'
+  hero: 'Hero'
   header: 'Top Bar'
   highlighted: 'Highlighted'
   help: 'Help'

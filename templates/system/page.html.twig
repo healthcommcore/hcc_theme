@@ -110,12 +110,20 @@
   {% endblock %}
 {% endif %}
 
+{% if page.hero %}
+  {% block hero %}
+    <div class="hero">
+      {{ page.hero }}
+    </div>
+  {% endblock %}
+{% endif %}
+
 {# Main #}
 {% block main %}
   <div role="main" class="main-container {{ container }} js-quickedit-main-content">
     <div class="row">
      {# Header #}
-      {% if page.header %}
+      {% if page.header and not is_front %}
         {% block header %}
           {{ page.header }}
         {% endblock %}

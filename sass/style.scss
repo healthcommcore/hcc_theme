@@ -67,6 +67,10 @@ h2 {
   background: $med-blue;
 }
 
+.navbar {
+  margin-bottom: 0;
+}
+
 .navbar-default {
   background: transparent;
   border: none;
@@ -161,6 +165,27 @@ h2 {
   }
   .navbar-nav > li.dropdown.active a {
     margin-bottom: 5px;
+  }
+}
+
+.hero {
+  img {
+    width: 100%;
+    background-size: cover;
+  }
+  .home-height img {
+    height: 650px;
+  }
+
+  .inside-height img {
+    height: 380px;
+  }
+  .home-hero img {
+    background-image: url("../images/home_hero.jpg");
+  }
+
+  .about-hero img {
+    background-image: url("../images/about_hero.jpg");
   }
 }
 
