@@ -132,7 +132,8 @@
       {# Sidebar First #}
       {% if page.sidebar_first %}
         {% block sidebar_first %}
-          <aside class="col-sm-3 hidden-xs" role="complementary">
+          {% set sidebar_width = is_front ? '5' : '3' %}
+          <aside class="col-sm-{{ sidebar_width }} hidden-xs" role="complementary">
             {{ page.sidebar_first }}
           </aside>
         {% endblock %}
@@ -144,6 +145,7 @@
           page.sidebar_first and page.sidebar_second ? 'col-sm-6',
           page.sidebar_first and page.sidebar_second is empty ? 'col-sm-9',
           page.sidebar_second and page.sidebar_first is empty ? 'col-sm-9',
+          page.sidebar_first and page.sidebar_second is empty and is_front ? 'col-sm-7',
           page.sidebar_first is empty and page.sidebar_second is empty ? 'col-sm-12'
         ]
       %}

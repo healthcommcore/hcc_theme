@@ -180,13 +180,51 @@ h2 {
   .inside-height img {
     height: 380px;
   }
-  .home-hero img {
-    background-image: url("../images/home_hero.jpg");
+  .home-hero {
+    p {
+      margin: 0;
+    }
+    .see-thru {
+      background-color: rgba(255, 255, 255, 0.7);
+    }
+    .home-hero-text-container {
+      margin-top: -144px;
+      width: 100%;
+    }
+    .home-hero-text {
+      text-align: center;
+      padding: 40px 0 45px 0;
+      margin: 0;
+    }
+    img {
+      background-image: url("../images/home_hero.jpg");
+    }
+    .green-bar {
+      height: 65px;
+      width: 100%;
+      background: $lt-green;
+    }
+
   }
 
   .about-hero img {
     background-image: url("../images/about_hero.jpg");
   }
+}
+
+.home-header-container {
+  margin-bottom: 20px;
+  .home-courses-header {
+    top: -47px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.0em;
+    font-family: $sinkin-lt;
+  }
+}
+
+.home-news {
+  padding-left: 60px;
 }
 
 .footer {
@@ -252,6 +290,10 @@ h2 {
     display: block;
     clear: both;
   }
+}
+
+.absolute {
+  position: absolute;
 }
 
 /* large breakpoint */
