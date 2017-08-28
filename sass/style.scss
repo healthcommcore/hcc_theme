@@ -59,8 +59,11 @@ h2 {
 }
 
 .page-title {
-  border-bottom: $dark-blue 2px solid;
   margin-bottom: 40px;
+}
+
+.title-border {
+  border-bottom: $dark-blue 2px solid;
 }
 
 .navbar-color {
@@ -168,6 +171,9 @@ h2 {
   }
 }
 
+.see-thru {
+  background-color: rgba(255, 255, 255, 0.9);
+}
 .hero {
   img {
     width: 100%;
@@ -183,9 +189,6 @@ h2 {
   .home-hero {
     p {
       margin: 0;
-    }
-    .see-thru {
-      background-color: rgba(255, 255, 255, 0.7);
     }
     .home-hero-text-container {
       margin-top: -144px;
@@ -210,6 +213,21 @@ h2 {
   .about-hero img {
     background-image: url("../images/about_hero.jpg");
   }
+  .faculty-hero img {
+    background-image: url("../images/faculty_hero.jpg");
+  }
+  .courses-hero img {
+    background-image: url("../images/courses_hero.jpg");
+  }
+  .training-hero img {
+    background-image: url("../images/training_hero.jpg");
+  }
+  .seminars-hero img {
+    background-image: url("../images/seminars_hero.jpg");
+  }
+  .contact-hero img {
+    background-image: url("../images/contact_hero.jpg");
+  }
 }
 
 .home-header-container {
@@ -227,6 +245,14 @@ h2 {
   padding-left: 60px;
 }
 
+h1.landing {
+  top: -111px;
+  left: -14px;
+  font-size: 3.0em;
+  color: $med-blue;
+  padding: 8px 66px 15px 30px;
+}
+        
 .footer {
   padding: 30px 0 50px;
 }

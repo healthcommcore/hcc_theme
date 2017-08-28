@@ -18,11 +18,12 @@
  */
 #}
 {% if title %}
-  <div class="page-title col-md-12" role="heading">
+  {% set title_border = is_landing ? '' : 'title-border ' %}
+  <div class="page-title {{ title_border }}col-md-12" role="heading">
     <div class="row">
       <div class="col-md-9 col-md-push-3">
         {% if is_landing %}
-          <h1 class="content-margin-left landing absolute">{{ title }}</h1>
+          <h1 class="content-margin-left landing absolute see-thru">{{ title }}</h1>
         {% else %}
           <h1 class="content-margin-left">{{ title }}</h1>
         {% endif %}

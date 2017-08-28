@@ -116,6 +116,9 @@
       {{ page.hero }}
     </div>
   {% endblock %}
+  {% if not is_front %}
+    <div class="title-border"></div>
+  {% endif %}
 {% endif %}
 
 {# Main #}
