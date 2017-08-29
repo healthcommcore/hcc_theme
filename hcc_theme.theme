@@ -20,16 +20,43 @@ function hcc_theme_preprocess_page_title (&$variables) {
   $to_arr = explode("/", $route);
   $route_array = array_slice($to_arr, 1);
   $is_landing = count($route_array) === 1 ? true : false;
-  //kint($is_landing);
   $variables['is_landing'] = $is_landing;
 }
 
 /**
  * Implements hook_preprocess_views_view()
  */
-function hcc_theme_preprocess_views_view($variables) {
-  if ( $header = $variables["header"]["area"]["#text"]) {
-    $header = htmlspecialchars_decode($header);
-    $variables["title_replacement"] = $header;
+function hcc_theme_preprocess_views_view(&$variables) {
+
+// Check if the view has the #name key to see which view we're in
+  if ( isset($variables["view_array"]["#name"]) ) {
+    $name = $variables["view_array"]["#name"];
+  } 
+
+// Grab the machine name of the view display use reformat it for outputting
+// in the view template but only if it is a course view and is not the course
+// view landing page
+  if ($display_id = $variables["display_id"]) {
+    if ( isset($name) && is_a_course_page($name) && !is_course_landing_page($display_id) ) {
+      $subtitle = ucfirst( implode(" ", explode("_", $display_id) ) );
+      $variables["subtitle"] = $subtitle;
+    }
   }
+}
+
+
+function is_a_course_page($name) {
+  $arr = explode("_", $name);
+  if ($arr[count($arr) - 1] == "course") {
+    return true;
+  }
+  return false;
+}
+
+function is_course_landing_page($display_id) {
+  $arr = explode("_", $display_id);
+  if ( strtolower($arr[0]) == "page") {
+    return true;
+  }
+  return false;
 }
