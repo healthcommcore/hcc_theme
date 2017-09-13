@@ -255,6 +255,21 @@ h2 {
   margin-bottom: 30px;
 }
 
+.home-buttons p {
+  text-align: center;
+}
+
+.social-media {
+  background-image: url("../images/social_media_logos.gif");
+  background-repeat: no-repeat;
+  width: 48px;
+  height: 48px;
+}
+
+.facebook {
+  background-position: 100% 0;
+}
+
 .breadcrumb {
   background: none;
 }
@@ -290,6 +305,46 @@ h2 {
   .ui-corner-bottom,
   .ui-corner-left {
     border: none;
+  }
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.btn-spacing {
+  margin: 15px 0;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.schedule-list.ui-accordion {
+  .ui-accordion-header {
+    font-size: 1.2em;
+    .ui-accordion-header-icon {
+      left: 0;
+    }
+  }
+  .ui-accordion-icons {
+    padding-left: $accordion-padding;
+    padding-bottom: 10px;
+  }
+  .ui-accordion-content {
+    padding-left: $accordion-padding;
+    padding-top: 10px;
+    color: $dark-blue;
+  }
+  .field--name-field-time-and-title-small {
+    font-weight: $semi;
+    margin-bottom: 10px;
+  }
+  p {
+    margin-bottom: 10px;
+  }
+  .paragraph {
+    margin-bottom: 30px;
   }
 }
 
