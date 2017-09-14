@@ -54,10 +54,15 @@ h1 {
   letter-spacing: -0.02em;
 }
 
+.faculty .field--label,
 h2 {
   font-family: $freight;
   font-weight: $semi;
   color: $green;
+  font-size: $h2-size-lg;
+}
+
+h2 {
   margin-top: 40px;
 }
 
@@ -127,6 +132,7 @@ h2 {
     float: none;
     }
   .navbar-nav > li > a {
+    display: inline-block;
     font-family: $submenu-link-font;
     color: $submenu-link-color;
     line-height: 1.6;
@@ -276,12 +282,24 @@ h2 {
 
 /* VIEWS */
 
+.views-field {
+  margin: $paragraph-margin;
+  .view-people-positions {
+    .views-field {
+      margin-bottom: 0;
+    }
+  }
+}
+
 .view-faculty {
   .views-row {
     margin: $paragraph-margin;
     .no-bio {
       font-weight: $semi;
     }
+  }
+  .views-field.views-field-field-has-bio {
+    margin-bottom: 0;
   }
 }
 
@@ -318,6 +336,51 @@ h2 {
 
 .center-text {
   text-align: center;
+}
+
+.views-field-field-dates-and-location {
+  font-weight: $semi;
+}
+
+.faculty {
+  .field--label {
+    margin-top: 20px;
+  }
+  .field--name-field-image {
+    float: left;
+    margin: 7px 20px 5px 0;
+  }
+  .field--name-field-educational-and-profession  {
+    table {
+      width: 100% !important;
+      td {
+        vertical-align: top;
+        padding: 5px 18px 6px 0;
+      }
+    }
+  }
+}
+
+.faculty-disclosure {
+  margin: 60px 0;
+  padding: 15px 30px;
+  font-style: italic;
+  font-size: 0.8em;
+  p {
+    color: #000;
+  }
+  h2 {
+    font-size: 1.1em;
+    color: $dark-blue;
+    margin-bottom: 7px;
+  }
+}
+
+.paragraph {
+  margin: $paragraph-margin;
+  .field--name-field-heading {
+    font-weight: $semi;
+  }
 }
 
 .schedule-list.ui-accordion {
