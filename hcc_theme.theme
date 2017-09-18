@@ -27,7 +27,6 @@ function hcc_theme_preprocess_page_title (&$variables) {
  * Implements hook_preprocess_views_view()
  */
 function hcc_theme_preprocess_views_view(&$variables) {
-
 // Check if the view has the #name key to see which view we're in
   if ( isset($variables["view_array"]["#name"]) ) {
     $name = $variables["view_array"]["#name"];
@@ -44,7 +43,6 @@ function hcc_theme_preprocess_views_view(&$variables) {
   }
 }
 
-
 function is_a_course_page($name) {
   $arr = explode("_", $name);
   if ($arr[count($arr) - 1] == "course") {
@@ -60,3 +58,4 @@ function is_course_landing_page($display_id) {
   }
   return false;
 }
+
