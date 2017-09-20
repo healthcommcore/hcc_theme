@@ -124,13 +124,31 @@
 {# Main #}
 {% block main %}
   <div role="main" class="main-container {{ container }} js-quickedit-main-content">
+    {# Header #}
     <div class="row">
-     {# Header #}
       {% if page.header and not is_front %}
         {% block header %}
           {{ page.header }}
         {% endblock %}
       {% endif %}
+    </div>
+
+    {# Breadcrumbs #}
+    <div class="row">
+      {% if page.breadcrumbs and not is_front %}
+        <div class="col-sm-9 col-sm-push-3">
+          {% block breadcrumbs %}
+            <div class="breadcrumb-trail breadcrumb-margin">
+              {{ page.breadcrumbs }}
+            </div>
+          {% endblock %}
+        </div>
+      {% endif %}
+    </div>
+
+    {% set content_margin = is_front? "" : "main-content-margin" %}
+    <div class="{{ content_margin }}">
+    <div class="row">
 
       {# Sidebar First #}
       {% if page.sidebar_first %}
@@ -202,6 +220,7 @@
         {% endblock %}
       {% endif %}
     </div>
+  </div>
   </div>
 {% endblock %}
 

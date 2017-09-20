@@ -19,6 +19,10 @@ body {
   ul {
     margin: $list-margin;
   }
+  ul ul,
+  ul ol {
+    margin-top: 0;
+  }
 }
 
 .content-margin-left {
@@ -67,7 +71,7 @@ h2 {
 }
 
 .page-title {
-  margin-bottom: 40px;
+  margin-bottom: 10px;
 }
 
 .title-border {
@@ -280,6 +284,11 @@ h2 {
   background: none;
 }
 
+.breadcrumb-margin {
+  margin: 0 0 0 35px;
+}
+
+
 /* VIEWS */
 
 .views-field {
@@ -303,12 +312,14 @@ h2 {
   }
 }
 
+.view-syllabus-downloads.ui-widget,
 .view-schedule.ui-widget {
   font-size: 100%;
   font-family: $freight;
   font-weight: $book;
 }
 
+.view-syllabus-downloads,
 .view-schedule {
   .ui-state-default {
     background: none;
@@ -413,14 +424,80 @@ h2 {
 
 /* FORMS */
 
+label, legend {
+  font-weight: $semi;
+}
+
+legend, .btn,
+.form-control {
+  font-size: 1.0em;
+}
+
+.form-control {
+  height: auto;
+}
+
+legend {
+  color: $dark-blue;
+}
+
+.radio input[type="radio"], 
+.radio-inline input[type="radio"], 
+.checkbox input[type="checkbox"], 
+.checkbox-inline input[type="checkbox"] {
+  margin-top: 10px;
+}
+
+.progress-marker {
+  width: 34px;
+  height: 34px;
+  font-variant-numeric: lining-nums;
+}
+
+.file {
+  margin: 12px 0;
+}
+
+#edit-primary-email-mail-1--description {
+  font-size: 0.7em;
+}
+
+#webform-submission-pcep-application-node-134-add-form {
+}
+
 .webform-submission-form {
-  .form-control {
-    font-size: 1.0em;
-    height: auto;
+  .btn {
+    padding: 10px 20px;
+  }
+  .form-item {
+    margin: $paragraph-margin;
+  }
+  .webform-document-file {
+    .description {
+      font-size: 0.7em;
+    }
   }
 }
 
+
+.panel-title {
+  font-size: 0.9em;
+  text-transform: uppercase;
+}
+
+.form-item {
+  margin: $paragraph-margin;
+}
+
+.panel {
+  margin: 30px 0;
+}
+
 /* GENERAL STYLES */
+
+.main-content-margin {
+  margin: 30px 0 0 0;
+}
 
 h1.landing {
   top: -111px;
@@ -434,6 +511,11 @@ h1.landing {
   background: $orange;
   color: #fff;
   padding: 10px 25px 11px 25px;
+}
+
+.palcare-btn:hover {
+  color: $lt-orange;
+  text-decoration: none;
 }
 
 .btn-full-width {
@@ -479,9 +561,17 @@ h1.landing {
   .btn-primary {
     border-color: $med-blue;
   }
+  .form-control {
+    font-size: 14px;
+  }
   input::placeholder {
     color: $med-blue;
   }
+}
+
+#edit-keys--description.help-block {
+  position: absolute;
+  left: 100000000px;
 }
 
 .footer {
@@ -555,6 +645,13 @@ h1.landing {
 
 /* large breakpoint */
 @media(min-width: 992px) and (max-width: 1199px) {
+}
+
+@media(min-width: 1199px) {
+  .carousel-caption {
+    right: 10%;
+    left: 10%;
+  }
 }
 
 /* medium breakpoint */
