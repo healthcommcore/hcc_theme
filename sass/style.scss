@@ -105,7 +105,7 @@ h2 {
   background: none;
 }
 
-.navbar-default .navbar-nav > li > a {
+.navbar-default .navbar-nav > li a {
   font-family: $navlink-inactive-font;
   border-top: $med-blue 11px solid;
   border-bottom: $med-blue 4px solid;
@@ -549,6 +549,10 @@ h1.landing {
   background: $med-blue;
 }
 
+.block-display {
+  display: block;
+}
+
 .search-block {
   padding-top: 20px;
   .btn {
@@ -707,21 +711,49 @@ h1.landing {
   .navbar-collapse {
     background: #fff;
   }
-  .navbar-default .navbar-nav > li > a {
+  .navbar-default .navbar-nav > li a {
     padding-left: 20px;
+    border: none;
   }
   .navbar-default .navbar-nav > li.expanded.active > a {
     padding-bottom: 5px;
   }
-  .navbar-default .navbar-nav > li > a,
-  .navbar-default .navbar-nav > li > a:hover,
-  .navbar-default .navbar-nav > li.active > a,
-  .navbar-default .navbar-nav > li.active > a:hover,
-  .navbar-default .navbar-nav > li.active > a:focus,
-  .navbar-default .navbar-nav > li > a:focus {
+  .navbar-default .navbar-nav > li a,
+  .navbar-default .navbar-nav > li a:hover,
+  .navbar-default .navbar-nav > li a:focus {
     color: $submenu-link-color;
     background: none;
     border: 0;
+    text-decoration: none;
+  }
+
+  .navbar-default .navbar-nav > li.active a,
+  .navbar-default .navbar-nav > li.active a:hover,
+  .navbar-default .navbar-nav > li.active a:focus,
+  .navbar-default .navbar-nav > li a.is-active {
+    font-family: $navlink-active-font;
+  }
+
+  .navbar-default {
+    .navbar-toggle {
+      border-color: #fff;
+      border-radius: 0;
+      padding: 9px;
+      border-width: 2px;
+      .icon-bar {
+        background: #fff;
+        border-radius: 0;
+      }
+    }
+    .navbar-toggle:hover {
+      background: #fff;
+      .icon-bar {
+        background: $med-blue;
+      }
+    }
+    .dropdown-menu {
+      float: none;
+    }
   }
 
   .dropdown-menu {

@@ -21,15 +21,15 @@
   We call a macro which calls itself to render the full tree.
   @see http://twig.sensiolabs.org/doc/tags/macro.html
 #}
-{{ menus.menu_links(items, attributes, 0) }}
+{{ menus.menu_links(items, attributes, 0, 0) }}
 
-{% macro menu_links(items, attributes, menu_level) %}
+{% macro menu_links(items, attributes, menu_level, item_num) %}
   {% import _self as menus %}
   {% if items %}
     {% if menu_level == 0 %}
       <ul{{ attributes.addClass('menu', 'nav', 'navbar-nav') }}>
     {% else %}
-      <ul{{ attributes.addClass('dropdown-menu') }}>
+      <ul id="menu-{{menu_level}}" {{ attributes.addClass('dropdown-menu') }}>
     {% endif %}
     {% for item in items %}
       {%
@@ -41,13 +41,16 @@
       %}
       {% if menu_level == 0 and item.is_expanded %}
         <li{{ item.attributes.addClass(item_classes) }}>
-        <a href="{{ item.url }}" class="dropdown-toggle">{{ item.title }}</a>
+          <div class="block-display">
+            <a href="{{ item.url }}" class="dropdown-toggle">{{ item.title }}</a>
+            <button type="button" class="btn btn-small pull-right" data-toggle="collapse" >More</button>
+          </div>
       {% else %}
         <li{{ item.attributes.addClass(item_classes) }}>
         {{ link(item.title, item.url) }}
       {% endif %}
       {% if item.below %}
-        {{ menus.menu_links(item.below, attributes.removeClass('nav', 'navbar-nav'), menu_level + 1) }}
+        {{ menus.menu_links(item.below, attributes.removeClass('nav', 'navbar-nav'), menu_level + 1, 0) }}
       {% endif %}
       </li>
     {% endfor %}
