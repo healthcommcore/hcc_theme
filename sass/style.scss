@@ -15,7 +15,7 @@ body {
 }
 
 .main-content {
-  font-size: 1.2em;
+  font-size: $main-font-size-lg;
   ul {
     margin: $list-margin;
   }
@@ -54,7 +54,7 @@ a {
 h1 {
   font-family: $freight-con;
   font-weight: $book;
-  font-size: 2.7em;
+  font-size: $h1-size-lg;
   letter-spacing: -0.02em;
 }
 
@@ -75,7 +75,7 @@ h2 {
 }
 
 .title-border {
-  border-bottom: $dark-blue 2px solid;
+  border-bottom: $dark-blue 1px solid;
 }
 
 .navbar-color {
@@ -105,7 +105,7 @@ h2 {
   background: none;
 }
 
-.navbar-default .navbar-nav > li a {
+.navbar-default .navbar-nav > li > a {
   font-family: $navlink-inactive-font;
   border-top: $med-blue 11px solid;
   border-bottom: $med-blue 4px solid;
@@ -193,7 +193,7 @@ h2 {
     background-size: cover;
   }
   .home-height img {
-    height: 650px;
+    height: $hero-img-ht-lg;
   }
 
   .inside-height img {
@@ -204,22 +204,24 @@ h2 {
       margin: 0;
     }
     .home-hero-text-container {
-      margin-top: -160px;
+      margin-top: $hero-txt-margin-lg;
       width: 100%;
-      height: 160px
+      height: $hero-txt-ht-lg;
     }
     .carousel-caption {
       text-shadow: none;
+      padding-bottom: 0;
+      bottom: 30px;
     }
     .carousel-caption h1 {
       text-align: center;
       color: $dark-blue;
     }
     img.hero-1 {
-      background-image: url("../images/home_hero.jpg");
+      background-image: url("../images/home_hero_1_revise.jpg");
     }
     img.hero-2 {
-      background-image: url("../images/home_hero_2.jpg");
+      background-image: url("../images/home_hero_2_revise.jpg");
     }
     .green-bar {
       height: 65px;
@@ -337,6 +339,19 @@ h2 {
   }
 }
 
+.subtitle {
+  text-transform: uppercase;
+  display: block;
+  background: $offwhite;
+  font-weight: $med;
+  font-style: italic;
+  border-top: $green 1px solid;
+  padding: 5px 0 10px 15px;
+  font-size: 1.0em;
+  margin-bottom: 40px;
+}
+          
+
 .inline-block {
   display: inline-block;
 }
@@ -420,6 +435,15 @@ h2 {
   .paragraph {
     margin-bottom: 30px;
   }
+}
+
+.field--name-field-time-and-title-multiple-se {
+  color: $green;
+  display: block;
+  border-bottom: $green 1px solid;
+  font-size: 1.15em;
+  font-weight: $semi;
+  font-style: italic;
 }
 
 /* FORMS */

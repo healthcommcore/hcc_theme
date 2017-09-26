@@ -41,10 +41,8 @@
       %}
       {% if menu_level == 0 and item.is_expanded %}
         <li{{ item.attributes.addClass(item_classes) }}>
-          <div class="block-display">
             <a href="{{ item.url }}" class="dropdown-toggle">{{ item.title }}</a>
-            <button type="button" class="btn btn-small pull-right" data-toggle="collapse" >More</button>
-          </div>
+            <button type="button" class="btn btn-small pull-right visible-xs" data-toggle="collapse" >More</button>
       {% else %}
         <li{{ item.attributes.addClass(item_classes) }}>
         {{ link(item.title, item.url) }}
