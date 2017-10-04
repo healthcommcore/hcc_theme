@@ -19,9 +19,11 @@ body {
   ul {
     margin: $list-margin;
   }
-  ul ul,
-  ul ol {
-    margin-top: 0;
+  .pager-nav ul,
+  ul ul, ol ul,
+  h2 ~ ul,
+  h2 ~ ol {
+    margin-top: $list-margin-normalize;
   }
 }
 
@@ -56,6 +58,7 @@ h1 {
   font-weight: $book;
   font-size: $h1-size-lg;
   letter-spacing: -0.02em;
+  padding-top: 20px;
 }
 
 .faculty .field--label,
@@ -68,6 +71,19 @@ h2 {
 
 h2 {
   margin-top: 40px;
+}
+
+h3 {
+  font-size: $h3-size-lg;
+  font-weight: $semi;
+  font-style: italic;
+  margin-bottom: 5px;
+}
+
+h4 {
+  font-size: $h4-size-lg;
+  font-weight: $semi;
+  margin-bottom: 3px;
 }
 
 .page-title {
@@ -129,8 +145,15 @@ h2 {
 /*
 */
 
+.toprule {
+  border-top: $orange 1px solid;
+  padding: 10px 0;
+}
+
 .subnav {
   .navbar-nav {
+    float: none;
+    margin-bottom: 20px;
   }
   li {
     float: none;
@@ -346,11 +369,28 @@ h2 {
   font-weight: $med;
   font-style: italic;
   border-top: $green 1px solid;
-  padding: 5px 0 10px 15px;
-  font-size: 1.0em;
+  padding: 7px 0 12px 20px;
   margin-bottom: 40px;
+  letter-spacing: 0.04em;
+}
+
+h2.subtitle {
+  font-size: 1.0em;
 }
           
+div.subtitle {
+  padding-top: 13px;
+  padding-bottom: 12px;
+  h2 {
+    font-size: 1.0em;
+    font-weight: $med;
+    padding: 0;
+    margin: 0 0 8px 0;
+  }
+  h2.lighter {
+    font-weight: $lt;
+  }
+}
 
 .inline-block {
   display: inline-block;
@@ -379,6 +419,9 @@ h2 {
   .field--name-field-educational-and-profession  {
     table {
       width: 100% !important;
+      td:first-child {
+        width: $faculty-table-cell-width-lg;
+      }
       td {
         vertical-align: top;
         padding: 5px 18px 6px 0;
@@ -450,6 +493,11 @@ h2 {
 
 label, legend {
   font-weight: $semi;
+}
+
+.form-required::after {
+  background-repeat: no-repeat;
+  height: 15px;
 }
 
 legend, .btn,
@@ -524,12 +572,13 @@ legend {
 }
 
 h1.landing {
-  top: -111px;
+  top: -110px;
   left: -14px;
   font-size: 3.0em;
   color: $med-blue;
   padding: 8px 66px 15px 30px;
 }
+
 
 .palcare-btn {
   background: $orange;
@@ -540,6 +589,12 @@ h1.landing {
 .palcare-btn:hover {
   color: $lt-orange;
   text-decoration: none;
+}
+
+.palcare-btn.disabled {
+  pointer-events: none;
+  cursor: not-allowed;
+  opacity: .65;
 }
 
 .btn-full-width {
@@ -557,16 +612,28 @@ h1.landing {
   border-top: $med-blue 10px solid;
 }
 
+.views-field-field-who-should-attend,
+.views-field-field-objectives {
+  ul {
+    margin-top: 10px;
+  }
+}
+
 .callout-photos {
   color: #000;
-  font-size: 0.8em;
+  font-size: 0.9em;
   img {
     float: left;
     margin: 5px 20px 10px -40px;
   }
 }
 
-.about-callout {
+.space-between-list-items {
+  margin: 15px 0;
+}
+
+small, .small {
+  font-size: 70%;
 }
 
 .btn-primary {
@@ -577,11 +644,18 @@ h1.landing {
   display: block;
 }
 
+.form-type-search,
 .search-block {
-  padding-top: 20px;
+  .form-control {
+    font-size: 14px;
+  }
   .btn {
     font-size: 14px;
   }
+}
+
+.search-block {
+  padding-top: 20px;
   .btn-primary {
     background: #fff;
   }
@@ -591,9 +665,6 @@ h1.landing {
   .form-control,
   .btn-primary {
     border-color: $med-blue;
-  }
-  .form-control {
-    font-size: 14px;
   }
   input::placeholder {
     color: $med-blue;
