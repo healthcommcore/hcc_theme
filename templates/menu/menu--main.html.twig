@@ -34,15 +34,17 @@
     {% for item in items %}
       {%
         set item_classes = [
-          item.is_expanded? 'expanded',
+          item.below ? 'btn-group',
+          item.is_expanded ? 'expanded',
           item.is_expanded and menu_level == 0 ? 'dropdown',
           item.in_active_trail ? 'active',
         ]
       %}
       {% if menu_level == 0 and item.is_expanded %}
         <li{{ item.attributes.addClass(item_classes) }}>
-            <a href="{{ item.url }}" class="dropdown-toggle">{{ item.title }}</a>
-            <button type="button" class="btn btn-small pull-right visible-xs" data-toggle="collapse" >More</button>
+          <button type="button" class="btn btn-expand-menu pull-right visible-xs dropdown-toggle" data-toggle="dropdown">More</button>
+          <a href="{{ item.url }}" class="pull-left">{{ item.title }}</a>
+          <span class="clearfix"></span>
       {% else %}
         <li{{ item.attributes.addClass(item_classes) }}>
         {{ link(item.title, item.url) }}

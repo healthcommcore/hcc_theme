@@ -810,11 +810,24 @@ small, .small {
     padding-left: 20px;
     border: none;
   }
+  .navbar-default .navbar-nav li.btn-group.open > a,
   .navbar-default .navbar-nav > li.expanded.active > a {
     padding-bottom: 5px;
   }
   .navbar-default .navbar-nav > li a,
   .navbar-default .navbar-nav > li a:hover,
+  .navbar-default .navbar-nav > .open > a, 
+  .navbar-default .navbar-nav > .open > a:hover, 
+  .navbar-default .navbar-nav > .open > a:focus,
+  .navbar-default .navbar-nav > li.active > a,
+  .navbar-default .navbar-nav > li.active > a:hover,
+  .navbar-default .navbar-nav > li.active > a:focus,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a, 
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, 
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus,
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a,
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus,
   .navbar-default .navbar-nav > li a:focus {
     color: $submenu-link-color;
     background: none;
@@ -849,6 +862,30 @@ small, .small {
     .dropdown-menu {
       float: none;
     }
+  }
+
+  .btn-group {
+    .dropdown-menu {
+      display: none;
+    }
+    .btn.btn-expand-menu {
+      background: $orange;
+      color: #fff;
+      padding: 3px 8px 5px 12px;
+      margin: 5px 10px 0 0;
+    }
+  }
+
+  .btn-group.active,
+  .btn-group.open {
+    .dropdown-menu {
+      display: block;
+    }
+  }
+
+  .navbar-nav .open .dropdown-menu > li > a, 
+  .navbar-nav .open .dropdown-menu .dropdown-header {
+    padding: 3px 20px;
   }
 
   .dropdown-menu {
