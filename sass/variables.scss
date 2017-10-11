@@ -46,9 +46,15 @@ $h2-size-lg: 30px;
 $h3-size-lg: 1.2em;
 $h4-size-lg: 1.0em;
 $paragraph-margin: 0 0 25px 0; 
-$list-margin: -18px 0 25px 30px;
+$list-margin-lg: -18px 0 25px 30px;
 $list-margin-normalize: 0;
 $accordion-padding: 23px;
 $hero-img-ht-lg: 550px;
 $hero-txt-ht-lg: 130px;
 $hero-txt-margin-lg: -130px;
+
+/* XS */
+$hero-img-ht-xs: 150px;
+$hero-txt-ht-xs: 50px;
+$hero-txt-h1-size: 1.0em;
+$list-margin-xs: -18px 0 25px 10px;

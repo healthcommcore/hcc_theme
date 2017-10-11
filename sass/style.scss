@@ -17,7 +17,7 @@ body {
 .main-content {
   font-size: $main-font-size-lg;
   ul {
-    margin: $list-margin;
+    margin: $list-margin-lg;
   }
   .pager-nav ul,
   ul ul, ol ul,
@@ -334,6 +334,12 @@ h4 {
   }
   .views-field.views-field-field-has-bio {
     margin-bottom: 0;
+  }
+}
+
+.views-field-field-positions-held {
+  p {
+    margin-bottom: 13px;
   }
 }
 
@@ -800,6 +806,18 @@ small, .small {
 
 
 @media(max-width: 767px) {
+  .banner {
+    overflow: hidden;
+  }
+  a.logo.pull-left {
+    float: none !important;
+  }
+
+  .search-block {
+    .form-item {
+      margin-bottom: 10px;
+    }
+  }
   .navbar-default {
     border-bottom: $med-blue 2px solid;
   }
@@ -822,6 +840,7 @@ small, .small {
   .navbar-default .navbar-nav > li.active > a,
   .navbar-default .navbar-nav > li.active > a:hover,
   .navbar-default .navbar-nav > li.active > a:focus,
+  .navbar-default .navbar-nav > li > a.is-active,
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a, 
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, 
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus,
@@ -912,16 +931,96 @@ small, .small {
       font-weight: $semi;
     }
   }
+
+
+  .hero {
+    .home-height img {
+      height: $hero-img-ht-xs;
+    }
+    .home-hero {
+      .green-bar {
+        height: 50px;
+      }
+      .home-hero-text-container {
+        height: $hero-txt-ht-xs;
+      }
+      .home-hero-text-container.absolute {
+        position: relative;
+        margin-top: 0;
+      }
+      .carousel-caption {
+        bottom: -1px;
+      }
+      .carousel-caption h1 {
+        font-size: $hero-txt-h1-size;
+      }
+    }
+    .inside-height img {
+      height: 100px;
+    }
+  }
+
+  h1.landing.see-thru {
+    background: none;
+  }
+  h1.landing.absolute {
+    position: relative;
+  }
+  h1.landing {
+    top: 0;
+    left: 0;
+    padding-left: 0;
+    padding-bottom: 0;
+    font-size: 2.3em;
+    margin-bottom: 0;
+  }
+
+  .breadcrumb-margin {
+    margin-left: 0;
+  }
+  .breadcrumb {
+    padding-left: 0;
+    margin-bottom: 8px;
+    li > a {
+      font-size: 0.8em;
+    }
+  }
+
+  .home-header-container {
+    margin-bottom: 10px;
+    .home-courses-header {
+      top: -37px;
+      font-size: 0.9em;
+    }
+  }
+
   .content-margin-left {
     margin-left: 0;
+  }
+
+  .page-title {
+    margin-bottom: 5px;
   }
   h1 {
     font-size: 2.3em;
     line-height: 1.0em;
     margin-top: 10px;
   }
+  .main-content-margin {
+    margin-top: 10px;
+  }
   .main-content {
     font-size: 1.1em;
+    ul {
+      margin: $list-margin-xs;
+    }
+  }
+
+  .callout {
+    padding: 20px;
+    .callout-photos img {
+      float: none;
+    }
   }
   .region-footer-right,
   .footer-logos,
