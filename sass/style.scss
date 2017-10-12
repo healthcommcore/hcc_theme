@@ -21,8 +21,9 @@ body {
   }
   .pager-nav ul,
   ul ul, ol ul,
-  h2 ~ ul,
-  h2 ~ ol {
+  h2 + .field-content ul,
+  h2 + ul,
+  h2 + ol {
     margin-top: $list-margin-normalize;
   }
 }
@@ -45,7 +46,7 @@ strong, a {
 }
 
 p {
-  margin: $paragraph-margin;
+  margin: $paragraph-margin-lg;
 }
 
 a {
@@ -317,7 +318,7 @@ h4 {
 /* VIEWS */
 
 .views-field {
-  margin: $paragraph-margin;
+  margin: $paragraph-margin-lg;
   .view-people-positions {
     .views-field {
       margin-bottom: 0;
@@ -327,7 +328,7 @@ h4 {
 
 .view-faculty {
   .views-row {
-    margin: $paragraph-margin;
+    margin: $paragraph-margin-lg;
     .no-bio {
       font-weight: $semi;
     }
@@ -380,7 +381,8 @@ h4 {
   letter-spacing: 0.04em;
 }
 
-h2.subtitle {
+.subtitle,
+.subtitle h2 {
   font-size: 1.0em;
 }
           
@@ -388,7 +390,6 @@ div.subtitle {
   padding-top: 13px;
   padding-bottom: 12px;
   h2 {
-    font-size: 1.0em;
     font-weight: $med;
     padding: 0;
     margin: 0 0 8px 0;
@@ -452,7 +453,7 @@ div.subtitle {
 }
 
 .paragraph {
-  margin: $paragraph-margin;
+  margin: $paragraph-margin-lg;
   .field--name-field-heading {
     font-weight: $semi;
   }
@@ -548,7 +549,7 @@ legend {
     padding: 10px 20px;
   }
   .form-item {
-    margin: $paragraph-margin;
+    margin: $paragraph-margin-lg;
   }
   .webform-document-file {
     .description {
@@ -564,7 +565,7 @@ legend {
 }
 
 .form-item {
-  margin: $paragraph-margin;
+  margin: $paragraph-margin-lg;
 }
 
 .panel {
@@ -1001,14 +1002,39 @@ small, .small {
   .page-title {
     margin-bottom: 5px;
   }
+
   h1 {
-    font-size: 2.3em;
+    font-size: $h1-size-xs;
     line-height: 1.0em;
     margin-top: 10px;
   }
+
+  .faculty .field--label,
+  h2 {
+    font-size: $h2-size-xs;
+    margin-bottom: 8px;
+    line-height: 1.05em;
+  }
+
+  h3 {
+    font-size: $h3-size-xs;
+  }
+
+  .subtitle {
+    font-size: 0.8em;
+  }
+
+  p, .views-field, 
+  .view-faculty .views-row,
+  .webform-submission-form .form-item,
+  .form-item, .paragraph { 
+    margin: $paragraph-margin-xs;
+  }
+
   .main-content-margin {
     margin-top: 10px;
   }
+
   .main-content {
     font-size: 1.1em;
     ul {
@@ -1016,12 +1042,23 @@ small, .small {
     }
   }
 
+  .small, small {
+    display: inline-block;
+  }
+
   .callout {
     padding: 20px;
-    .callout-photos img {
-      float: none;
-    }
   }
+
+  .callout-photos img {
+    float: none;
+  }
+
+  .faculty-disclosure {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
   .region-footer-right,
   .footer-logos,
   .footer-menu,
