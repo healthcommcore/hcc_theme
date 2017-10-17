@@ -239,6 +239,8 @@ h4 {
     .carousel-caption {
       text-shadow: none;
       padding-bottom: 0;
+      right: 10%;
+      left: 10%;
       bottom: 30px;
     }
     .carousel-caption h1 {
@@ -756,11 +758,57 @@ small, .small {
   position: absolute;
 }
 
+@media(max-width: 1199px) {
+  .subtitle,
+  .subtitle h2 {
+    font-size: 0.9em;
+  }
+}
+          
+
 /* large breakpoint */
 @media(min-width: 992px) and (max-width: 1199px) {
-}
 
-@media(min-width: 1199px) {
+  .navbar-default {
+    .navbar-nav > li > a {
+      padding: 14px 23px 23px;
+      font-size: 0.9em;
+    }
+  }
+  .navbar-default .navbar-nav > li > a,
+  .navbar-default .navbar-nav > li > a:hover,
+  .navbar-default .navbar-nav > li > a:focus,
+  .navbar-default .navbar-nav > li.active > a,
+  .navbar-default .navbar-nav > li > a.is-active {
+    border-top-width: 8px;
+  }
+
+  .hero {
+    .home-height img {
+      height: $hero-img-ht-md;
+    }
+    .home-hero {
+      .home-hero-text-container {
+        margin-top: $hero-txt-margin-md;
+        height: $hero-txt-ht-md;
+      }
+      .carousel-caption {
+        bottom: 20px;
+      }
+      .carousel-caption h1 {
+        font-size: $hero-txt-h1-size-md;
+      }
+    }
+    .inside-height img {
+      height: 260px;
+    }
+  }
+  h1.landing {
+    font-size: 2.8em;
+    padding: 7px 60px 12px 20px;
+    top: -102px;
+  }
+
 }
 
 @media(max-width: 991px) {
@@ -826,6 +874,7 @@ small, .small {
       height: 260px;
     }
   }
+
   h1.landing {
     font-size: 2.7em;
     padding: 6px 60px 12px 20px;
