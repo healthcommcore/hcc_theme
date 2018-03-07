@@ -4,12 +4,13 @@
   "description": "",
   "main": "gulpfile.js",
   "dependencies": {
-    "browser-sync": "^2.18.12",
-    "gulp-autoprefixer": "^2.3.1",
-    "gulp-plumber": "^1.0.0",
-    "gulp-sass": "^2.3.2",
-    "gulp-sourcemaps": "^1.12.0",
+    "browser-sync": "^2.23.6",
     "compass-mixins": "^0.12.10",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^2.3.1",
+    "gulp-plumber": "^1.2.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^1.12.1",
     "gulp-watch": "^4.3.5"
   },
   "devDependencies": {

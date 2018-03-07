@@ -285,10 +285,12 @@ h4 {
   margin-bottom: 20px;
   .home-courses-header {
     top: -47px;
-    color: #fff;
     text-transform: uppercase;
     font-size: 1.0em;
     font-family: $sinkin-lt;
+    a, a:hover, a:focus {
+      color: #fff;
+    }
   }
 }
 
@@ -562,6 +564,9 @@ legend {
       font-size: 0.7em;
     }
   }
+  .captcha {
+    margin-bottom: 25px;
+  }
 }
 
 
@@ -599,7 +604,8 @@ h1.landing {
   padding: 10px 25px 11px 25px;
 }
 
-.palcare-btn:hover {
+.palcare-btn:hover,
+.palcare-btn:focus {
   color: $lt-orange;
   text-decoration: none;
 }
